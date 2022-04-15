@@ -10,7 +10,7 @@ public class Exercicio02 {
 
     public String valorInvestido(double valorInvestido) {
         DecimalFormat frmt = new DecimalFormat("0.00");
-        double taxa = 0.05, total, valorJuros;
+        double taxa = 0.05, total;
         int ano = 1;
         
         total = valorInvestido;
@@ -18,12 +18,36 @@ public class Exercicio02 {
         total = (total * taxa) + total;
         ano++;
         }
-        valorJuros = total - valorInvestido;
-        
-        return "O valor de invetimento incial é: R$ "+ frmt.format(valorInvestido) + "\n"+
-        "O valor total do juros é: R$ " + frmt.format(valorJuros) + "\n"+ 
-        "O valor total do investimento é: R$ " + frmt.format(total) + "\n";
+        return "O valor de invetimento incial é: R$ "+ frmt.format(valorInvestido);
+    }
 
+    public String valorTotalJuros(double valorInvestido) {
+        DecimalFormat frmt = new DecimalFormat("0.00");
+        double taxa = 0.05, total, valorJuros;
+        int ano = 1;
+
+        total = valorInvestido;
+        while(ano <= 10){
+            total = (total * taxa) + total;
+            ano++;
+        }
+        valorJuros = total - valorInvestido;
+
+        return "O valor total do juros é: R$ " + frmt.format(valorJuros);
+    }
+
+    public String valorTotalInvestimento(double valorInvestido) {
+        DecimalFormat frmt = new DecimalFormat("0.00");
+        double taxa = 0.05, total;
+        int ano = 1;
+
+        total = valorInvestido;
+        while(ano <= 10){
+            total = (total * taxa) + total;
+            ano++;
+        }
+
+        return "O valor total do investimento é: R$ " + frmt.format(total);
     }
     
 }
