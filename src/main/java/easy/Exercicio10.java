@@ -10,6 +10,24 @@ public class Exercicio10 {
     // juros.
     // Considerando que a remuneração será no regime de juros simples.
 
+    public String valorInvestido(double valorInvestido) {
+
+        DecimalFormat frmt = new DecimalFormat("00.00");
+        double jurosAoano, taxaAoAno = 0, totalComJuros = 0;
+        int ano = 1;
+        if (valorInvestido <= 0.00) {
+            return "Valor digitado de investimento é invalido.";
+        } else {
+            while (ano <= 10) {
+                jurosAoano = valorInvestido * 0.05;
+                taxaAoAno = jurosAoano * ano;
+                totalComJuros = taxaAoAno + valorInvestido;
+                ano++;
+            }
+            return "Valor do investimento é: R$ " + (frmt.format(valorInvestido));
+        }
+    }
+
     public String calculoTaxaAoAno(double valorInvestido) {
 
         DecimalFormat frmt = new DecimalFormat("0.00");
@@ -24,10 +42,6 @@ public class Exercicio10 {
                 totalComJuros = taxaAoAno + valorInvestido;
                 ano++;
             }
-            // System.out.printf("Valor do total do juros é: R$ %.2f %n", taxa);
-            // System.out.printf("Valor do total com juros é: R$ %.2f %n", totalComJuros);
-            // return ("Valor investido foi: R$ " + (frmt.format(valorInvestido)) + "\n" + "Valor do total do juros é: R$ "
-            //        + (frmt.format(taxaAoAno)) + "\n" + "Valor do total com juros é: R$ " + (frmt.format(totalComJuros)));
             return "Valor do total do juros é: R$ " + (frmt.format(taxaAoAno));
         }
     }
@@ -46,11 +60,6 @@ public class Exercicio10 {
                     totalComJuros = taxaAoAno + valorInvestido;
                     ano++;
                 }
-                // System.out.printf("Valor do total do juros é: R$ %.2f %n", taxa);
-                // System.out.printf("Valor do total com juros é: R$ %.2f %n", totalComJuros);
-                // return ("Valor investido foi: R$ " + (frmt.format(valorInvestido)) + "\n" + "Valor do total do juros é: R$ "
-                //        + (frmt.format(taxaAoAno)) + "\n" + "Valor do total com juros é: R$ " + (frmt.format(totalComJuros)));
-
                 return "Valor do total com juros é: R$ " + (frmt.format(totalComJuros));
             }
 
