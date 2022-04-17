@@ -32,7 +32,7 @@ public class Exercicio04 {
 
     }
 
-        public int[] itercaoDeZeroAMil() {
+        public int[] iteracaoDeZeroAMil() {
 
             int i=1; 
             int saldo =1;
