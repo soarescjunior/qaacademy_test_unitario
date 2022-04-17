@@ -15,8 +15,13 @@ public class Exercicio09Medium {
 
         Exercicio09 exercicio09 = new Exercicio09();
 
+        //Test Unitario Nome Aluno
         Assert.assertArrayEquals(vetorAlunos, exercicio09.exibeAlunos(vetorAlunos));
+
+        //Test Unitario Numero Aluno
         Assert.assertArrayEquals(vetorNumeroAlunos, exercicio09.exibeNumerosAluno(vetorNumeroAlunos));
+
+        //Exibir Resultado
         exercicio09.Exibir(vetorAlunos,vetorNumeroAlunos);
 
     }

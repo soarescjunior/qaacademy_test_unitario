@@ -6,22 +6,21 @@ public class Exercicio08 {
 
     //Exercício 8 - Faça um algoritmo para exibir todos os meses digitados anteriormente.
 
-    public static void main(String[] args) {
+   public String[] mesesDigitados(String[] vetorMeses) {
+       int i = 1;
+       while (i <= 12) {
+           i++;
+       }
+        return vetorMeses;
+    }
 
-        String[] vetorMes = new String[12];
-        String mesDigitado;
-        int i = 0;
-
-        while (i <= 11) {
-            mesDigitado = JOptionPane.showInputDialog("digite o mes");
-            vetorMes[i] = mesDigitado;
+    public String[] ExibirMesesDigitados(String[] vetorMeses) {
+        int i = 1;
+        while (i <= 12) {
+            System.out.println("Você Digitou " + vetorMeses[i-1]);
             i++;
         }
-        i = 0;
-        while (i <= 11) {
-            System.out.println("Você Digitou " + vetorMes[i]);
-            i++;
-        }
+        return vetorMeses;
     }
 
 }
