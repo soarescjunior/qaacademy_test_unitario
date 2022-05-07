@@ -12,7 +12,7 @@ public class Exercicio10Medium {
 
         Exercicio10 exercicio10 = new Exercicio10();
 
-        int validarVetorFibonacci [] = exercicio10.calcularFibonacciVetor(10);
+        int validarVetorFibonacci [] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34};
 
         Assert.assertArrayEquals(validarVetorFibonacci, exercicio10.calcularFibonacciVetor(10));
 
